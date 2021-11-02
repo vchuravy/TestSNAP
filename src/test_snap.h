@@ -30,8 +30,11 @@
 // Memory class
 
 Memory* memory = NULL;
+SNA* snaptr = NULL;
 
 // MD data
+
+extern "C" {
 
 int ninside;            // num neighbors per atom
 int nlocal;             // number of local atoms
@@ -44,7 +47,6 @@ int ncoeff;                  // number of beta coefficients
 
 // SNAP data
 
-SNA* snaptr = NULL;
 double rcutfac;             // SNAP parameter, set by refdata
 int twojmax;                // SNAP parameter, set by refdata
 double rfac0 = 0.99363;     // SNAP parameter
@@ -55,9 +57,10 @@ int quadraticflag = 0;      // SNAP parameter
 
 // function declarations
 
-void options(int, char*[]);
-void init();
-void compute();
+    void options(int, char*[]);
+    void init();
+    void compute();
+}
 
 // timer classes
 

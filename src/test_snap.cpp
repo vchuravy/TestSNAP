@@ -91,7 +91,7 @@ int main(int argc, char* argv[]){
    Allocate memory and initialize data structures
 ------------------------------------------------------------------------- */
 
-void options(int argc, char* argv[]) {
+extern "C" void options(int argc, char* argv[]) {
 
   for (int i = 1; i < argc; i++) {
 
@@ -113,7 +113,7 @@ void options(int argc, char* argv[]) {
    Allocate memory and initialize data structures
 ------------------------------------------------------------------------- */
 
-void init() {
+extern "C" void init() {
 
   // initialize SNAP model using reference data
 
@@ -159,7 +159,7 @@ void init() {
    Calculate forces on all local atoms 
 ------------------------------------------------------------------------- */
 
-void compute() {
+extern "C" void compute() {
   int jt, jjt;
 
   // initialize all forces to zero

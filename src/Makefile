@@ -24,9 +24,9 @@ CXXLD         = $(CXX) $(CXXFLAGS)
 # Make the executable
 #==========================
 
-$(EXE): $(SRC) $(INC)
+test_snap.so: $(SRC) $(INC)
 	echo $(SRC)
-	$(CXXLD) $(SRC) -o $(EXE)
+	$(CXXLD) $(SRC) -fPIC -shared -o test_snap.so
 
 #==========================
 #remove all objs
